@@ -1,0 +1,70 @@
+class Solution {
+public:
+     int firstposition(vector<int>& arr,int target){
+
+        int low = 0;
+        int mid;
+        int high = arr.size()-1;
+        int ans = -1;
+
+        while(low <= high){
+            
+            mid = low + (high - low)/2;
+
+            if ( arr[mid] == target){
+                ans = mid;
+               high = mid - 1;
+            }
+        
+                else if (arr[mid] > target){
+                    high = mid - 1;
+                }
+                else if (arr[mid] < target){
+                    low = mid + 1;
+                }
+        }
+                return ans;
+     }
+        
+               int lastposition(vector<int>& arr,int target){
+
+               
+               
+               int low = 0;
+               int mid;
+               int high = arr.size()-1;
+               int ans = -1;
+
+               while(low <= high){
+
+                mid = low + (high - low)/2;
+
+                if( arr[mid] == target){
+                    ans = mid;
+                    low = mid  + 1;
+                }
+                else if( arr[mid]  > target){
+                 high = mid - 1;
+                }
+                else if( arr[mid] < target){
+                    low = mid +1;
+                }
+               }
+
+                  return ans;
+
+               }
+               vector<int>searchRange(vector<int>& arr,int target){
+ 
+                int first = firstposition(arr,target);
+                int last = lastposition(arr,target);
+
+                  return{first,last};
+               }
+               
+               
+            
+        
+        
+    
+};
