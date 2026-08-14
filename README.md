@@ -18,6 +18,9 @@ THIS REPOSITORY IS A RECORD OF MY CONTINOUS DSA JOURNEY-FROM UNDERSTANDING THE B
 -quick sort
 -insertion sort
 -selection sort
-
+-binary search
+-first and last occurence
+-rotated array
+-linked list
 
 
